@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 70px;
+}
+.smallest{
+  --mul-width: 10px;
+  --mul-color: #000;
+}
+.small{
+  --mul-width: 13px;
+  --mul-color: #004;
+}
+.medium{
+  --mul-width: 16px;
+  --mul-color: #008;
+}
+.big{
+  --mul-width: 19px;
+  --mul-color: #00b;
+}
+.bigest{
+  --mul-width: 22px;
+  --mul-color: #00f;
+}
+.ic-mul{
+  width: calc(var(--mul-width) * 0.2);
+  height: var(--mul-width);
+  background: var(--mul-color);
+  border-radius: var(--mul-width);
+  position: relative;
+}
+.ic-mul::before{
+  width: calc(var(--mul-width) * 0.2);
+  height: var(--mul-width);
+  position: absolute;
+  transform: rotate(-55deg);
+  top: 0;
+  left: 0;
+  background: var(--mul-color);
+  content: '';
+  border-radius: var(--mul-width);
+}
+.ic-mul::after{
+  width: calc(var(--mul-width) * 0.2);
+  height: var(--mul-width);
+  position: absolute;
+  transform: rotate(55deg);
+  top: 0;
+  left: 0;
+  background: var(--mul-color);
+  content: '';
+  border-radius: var(--mul-width);
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-mul smallest"></div>
+  <div class="ic-mul small"></div>
+  <div class="ic-mul medium"></div>
+  <div class="ic-mul big"></div>
+  <div class="ic-mul bigest"></div>
+</div>
+
+</body>
+</html>

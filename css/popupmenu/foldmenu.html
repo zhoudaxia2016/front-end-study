@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+*{margin: 0;padding: 0;}
+body{
+  background: #2d2c41;
+}
+.container{
+  width: 360px;
+  margin: 100px auto;
+}
+li{
+  list-style: none;
+  text-indent: 40px;
+  font: 800 16px 'Opens Sans';
+  border-bottom: 1px solid #ccc;
+}
+.submenu{
+  color: #4d4d4d;
+  background: #fff;
+  line-height: 50px;
+}
+.submenu ul{
+  color: #d9d9d9;
+  background: #444359;
+  display: none;
+}
+.submenu li{
+  line-height: 43px;;
+}
+.submenu li:hover{
+  background: #a55;
+}
+  </style>
+  <title></title>
+</head>
+<body>
+<ul class='container'>
+  <li class=submenu>Diseno web
+  <ul>
+    <li>Photoshop</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Maquestaction web</li>
+  </ul>
+  </li>
+  <li class=submenu>Desarrollo front-end
+  <ul>
+    <li>Javascript</li>
+    <li>JQuery</li>
+    <li>Frameworks javascript</li>
+  </ul>
+  </li>
+  <li class=submenu>Diseno responsive
+  <ul>
+    <li>Tablets</li>
+    <li>Dispositivos mobiles</li>
+    <li>Medios de escritorio</li>
+    <li>Otros dispositivos</li>
+  </ul>
+  </li>
+  <li class=submenu>Posicionamiento web
+  <ul>
+    <li>Google</li>
+    <li>Bing</li>
+    <li>Yahoo</li>
+    <li>Otros buscadores</li>
+  </ul>
+  </li>
+</ul>
+<script>
+//还需要重新改写submenu的li的点击事件
+var current = null;
+var subs = document.getElementsByClassName('submenu');
+function show(e){
+  if (this == current){
+    current = null;
+    this.childNodes[1].style.display = 'none';
+  }
+  else{
+    this.childNodes[1].style.display = 'block';
+    if (current != null){
+      current.childNodes[1].style.display = 'none';
+    }
+    current = this;
+  }
+} 
+for (let i=0, len=subs.length; i<len; i++){
+  subs[i].onclick = show;
+}
+</script>
+</body>
+</html>

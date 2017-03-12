@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <script src='{% static "login.js" %}'></script>
+    <link href='{% static "base.css" %}'rel='stylesheet' type='text/css'>
+    <link href='{% static "all.css" %}'rel='stylesheet' type='text/css'>
+    <title>All articles</title>
+</head>
+  <nav>
+    <ul>
+        <li><a href='/index.html'>每周一文</a></li>
+        <li class='thepage'><a href='/all.html'>全部文章</a></li>
+        <li><a href='/cooperation.html'>合作</a></li>
+        <li><a href='/about.html'>关于</a></li>
+        <li class='login'><a href='/login'>登入</a></li>
+    </ul>
+  </nav>
+
+  <ul class="art-list">
+      {% for blog in Blogs %}
+      <li>
+      <a href='{{ "/blog/" }}{{ blog.id }}' class='title'><h2>{{ blog.title }}</h2></a>
+      <div class="published-time">{{ blog.published_time|date }}</div>
+      <div class="view-num"><span>{{ blog.view_num }}</span>阅</div>
+      </li>
+      {% endfor %}
+  </ul>
+  <footer>
+    <div class="url">贤心博客 © sentsin.com</div>
+    <div class="link">
+      <ul>
+        <li>Layui</li>
+        <li>Github</li>
+        <li>@微博</li>
+        <li>旧版</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

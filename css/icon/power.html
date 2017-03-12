@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.ic-power{
+  position: relative;
+  width: var(--power-width);
+  height: var(--power-width);
+  border: calc(var(--power-width) * 0.2) solid var(--power-color);
+  border-radius: var(--power-width);
+  background: transparent;
+}
+.ic-power::before{
+  height: calc(var(--power-width) * 0.7);
+  width: calc(var(--power-width) * 0.2);
+  background: var(--power-color);
+  position: absolute;
+  content: '';
+  top: calc(var(--power-width) * -0.3);
+  left: calc(var(--power-width) * 0.4);
+  box-shadow: calc(var(--power-width) * 0.2) 0 #fff, calc(var(--power-width) * -0.2) 0 #fff;
+} 
+.small{
+  --power-color: #0aa;
+  --power-width: 10px;
+}
+.middle{
+  --power-color: #0a0;
+  --power-width: 15px;
+}
+.big{
+  --power-color: #a0a;
+  --power-width: 20px;
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-power small"></div>
+  <div class="ic-power middle"></div>
+  <div class="ic-power big"></div>
+</div>
+  
+</body>
+</html>

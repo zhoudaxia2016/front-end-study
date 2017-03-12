@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.small{
+  --search-width: 10px;
+  --search-color: #00a;
+}
+.middle{
+  --search-width: 15px;
+  --search-color: #0a0;
+}
+.big{
+  --search-width: 20px;
+  --search-color: #a00;
+}
+.ic-search{
+  width: var(--search-width);
+  height: var(--search-width);
+  border: calc(var(--search-width) * 0.2) solid var(--search-color);
+  background: transparent;
+  border-radius: var(--search-width);
+  position: relative;
+}
+.ic-search::before{
+  width: var(--search-width);
+  height: calc(var(--search-width) * 0.2);
+  position: absolute;
+  bottom: calc(var(--search-width) * -0.3);
+  left: calc(var(--search-width) * 0.7);
+  background: var(--search-color);
+  transform: rotate(45deg);
+  content: '';
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-search small"></div>
+  <div class="ic-search middle"></div>
+  <div class="ic-search big"></div>
+</div>
+
+</body>
+</html>

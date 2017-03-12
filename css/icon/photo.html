@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.small{
+  --photo-width: 10px;
+  --photo-color: #00a;
+  --photo-circle-color: #bbf;
+}
+.middle{
+  --photo-width: 15px;
+  --photo-color: #0a0;
+  --photo-circle-color: #bfb;
+}
+.big{
+  --photo-width: 20px;
+  --photo-color: #a00;
+  --photo-circle-color: #fbb;
+}
+.ic-photo{
+  width: var(--photo-width);
+  height: calc(var(--photo-width) * 0.7);
+  background: var(--photo-color);
+  position: relative;
+}
+.ic-photo::before{
+  width: calc(var(--photo-width) * 0.5);
+  height: calc(var(--photo-width) * 0.2);
+  position: absolute;
+  top: calc(var(--photo-width) * -0.2);
+  left: calc(var(--photo-width) * 0.25);
+  background: var(--photo-color);
+  content: '';
+}
+.ic-photo::after{
+  width: calc(var(--photo-width) * 0.5);
+  height: calc(var(--photo-width) * 0.5);
+  position: absolute;
+  top: calc(var(--photo-width) * 0.1);
+  left: calc(var(--photo-width) * 0.25);
+  background: var(--photo-circle-color);
+  border-radius: var(--photo-width);
+  content: '';
+}
+
+
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-photo small"></div>
+  <div class="ic-photo middle"></div>
+  <div class="ic-photo big"></div>
+</div>
+
+</body>
+</html>

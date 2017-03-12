@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+*{margin: 0; padding: 0;}
+input{
+  font-size: 20px;
+  --a: 35px;
+  height: var(--a);
+}
+.search-1 input[type=text]{
+  border-radius: 25px;
+  border: none;
+  background: #aaa;
+  color: #000;
+  text-indent: 1em;
+}
+.search-1{
+  display: inline-block;
+  margin: 100px 200px;
+  position: relative;
+}
+.search-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 35px;  
+  color: #aaa;
+  border-radius: var(--a);
+  display: inline-block;
+  top: 0;
+  right: 0;
+  background: transparent;
+}
+.search-btn::before{
+  position: absolute;
+  content: '';
+  bottom: 25%;
+  right: 25%;
+  width: 25%;
+  height: 50%;
+  border: 2px solid #0aa;
+  border-radius: 100%;
+}
+.search-btn::after{
+  position: absolute;
+  content: '';
+  bottom: 15%;
+  right: 15%;
+  width: 20%;
+  height: 2px;
+  background: #0aa;
+  transform: rotate(45deg);
+}
+<!-- 没有绑定click事件 -->
+
+  </style>
+</head>
+<body>
+<div class="search-1"><input type="text" placeholder='Search'><div class=search-btn></div></div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.smallest{
+  --trash-width: 20px;
+  --trash-color: #000;
+}
+.small{
+  --trash-width: 25px;
+  --trash-color: #004;
+}
+.medium{
+  --trash-width: 30px;
+  --trash-color: #008;
+}
+.big{
+  --trash-width: 35px;
+  --trash-color: #00b;
+}
+.bigest{
+  --trash-width: 40px;
+  --trash-color: #00f;
+}
+.ic-trash::after{
+  width: var(--trash-width);
+  height: calc(var(--trash-width) * 0.2);
+  border-top-left-radius: calc(var(--trash-width) * 0.05);
+  border-top-right-radius: calc(var(--trash-width) * 0.05);
+  background: var(--trash-color);
+  position: absolute;
+  bottom: var(--trash-width);
+  left: calc(var(--trash-width) * -0.2);
+  content: '';
+}
+.ic-trash::before{
+  width: calc(var(--trash-width) * 0.4);
+  height: calc(var(--trash-width) * 0.2);
+  position: absolute;
+  bottom: calc(var(--trash-width) * 1.2);
+  left: calc(var(--trash-width) * 0.1);
+  background: var(--trash-color);
+  content: '';
+}
+.ic-trash:hover::before{
+  transform: rotate(10deg);
+  transform-origin: right top;
+  transition: all 1s;
+}
+.ic-trash:hover::after{
+  transform: rotate(10deg);
+  transform-origin: right top;
+  transition: all 1s;
+}
+.ic-trash{
+  width: calc(var(--trash-width) * 0.6);
+  border-top: calc(var(--trash-width) * 1) solid var(--trash-color);
+  border-left: calc(var(--trash-width) * 0.1) solid transparent;
+  border-right: calc(var(--trash-width) * 0.1) solid transparent;
+  position: relative;
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-trash smallest"></div>
+  <div class="ic-trash small"></div>
+  <div class="ic-trash medium"></div>
+  <div class="ic-trash big"></div>
+  <div class="ic-trash bigest"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+  *{margin: 0; padding: 0;}
+  .nav{
+    width: 1200px;
+    margin: 0 auto;
+    height: 66.38px;
+    position: fixed;
+    top: 0;
+    left: 50px;
+  }
+  .nav>a>img{
+    margin-top: 10.19px; /* 垂直居中... 10.38 = .nav:heght/2 - img:height/2 */
+  }
+  .nav>ul{
+    float: right;
+  }
+  .nav>ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .for{
+    padding: 0 20px 0 20px;
+    line-height: 66.38px;
+    color: #626b7f;
+  }
+  .for:hover{
+    color: #2eb566;
+  }
+  .thepage{
+    color: #2ec866;
+  }
+
+  .btn{
+    border: 1px solid #2ec866;
+    padding: 12px;
+    margin-left: 5px;
+    border-radius: 4px;
+  }
+  .btn:hover{
+    background-color: #2eb566;
+    color: #fff;
+  }
+  .signup{
+    background: #2ec866;
+    color: #fff;
+  }
+  .comp{
+    position: relative;
+  }
+  .comp::before{
+    content: '';
+    position: absolute;
+    right: 0px;
+    border: solid 6px transparent;
+    border-bottom: 0;
+    border-top-color: #626b7f;
+    margin-top: 33.19px;
+    top: -3px;
+  }
+
+  /*-------------------- NAV 导航栏 ------------------------*/
+
+  .go{
+    height: 520px;
+    background: url(imgs/bg.png) top left;
+    margin-top: 66.38px;
+    text-align: center;
+    color: #fff;
+  }
+  .go *{
+    margin: 10px auto;
+  }
+  .go input{
+    display: block;
+  }
+  .go h1{
+    margin-top: 100px;
+  }
+  .go:before{
+    content:'';
+    border: 1px solid;
+  }
+  </style>
+  <title>HackerRank</title>
+</head>
+<body>
+  <div class="nav">
+    <a href='https://www.hackerrank.com/'><img src="imgs/logo.svg" id="logo"></a>
+    <ul>
+      <li class='thepage for'>For Developers</li>
+      <li class='for comp'>For Companies
+      </li>
+      <li class='for'>For School</li>
+      <li class='login btn'>Log In</li>
+      <li class='signup btn'>Sign Up</li>
+    </ul>
+  </div>
+  <div class="go">
+
+      <h1>Practice coding. Compete. Find jobs.</h1>
+      <h4>Join over 1 million programmers and improve your skills</h4>
+      <input type="text" class='user'>
+      <input type="text" class='email'>
+      <input type="text" class='pwd'>
+      <button>Sign Up & Start Coding</button>
+      <footer>By signing up you agree to our Terms of Service and Privacy Policy</footer>
+
+  </div>
+</body>
+</html>

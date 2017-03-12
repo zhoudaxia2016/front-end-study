@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.load{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  margin: 100px auto;
+}
+.bigger{
+  width: 100px;
+  height: 100px;
+  background: #05f;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bigger 1.2s ease-in-out infinite;
+}
+.smaller{
+  width: 50px;
+  height: 50px;
+  background: #05a;
+  border-radius: 50px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  animation: smaller 1.2s ease-in-out infinite;
+}
+@keyframes bigger{
+  0%,100%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(0.5,0.5);
+  }
+}
+@keyframes smaller{
+  0%,100%{
+    transform: scale(0,0);
+  }
+  50%{
+    transform: scale(1,1);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="load">
+    <div class="bigger"></div>
+    <div class="smaller"></div>
+  </div>
+</body>
+</html>

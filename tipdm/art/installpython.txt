@@ -1,0 +1,20 @@
+新手必会——安装Python+2016-10-23+ TipDM数据挖掘俱乐部
+### 1. 基本概念
+Python是一种开源的面向对象的解释型计算机程序设计语言。
+ 1. 开源：免费且能查看底层代码，能知道是什么组成了Python。
+ 2. 面向对象：相对于“面向过程”，认为所有的过程都是由对象发出的，因此对象是主体，过程（完成一件事的方法或操作）是对象的一种能力。
+ 3. 解释型：相对于“编译型”，即不进行编译（将代码翻译为机器码），速度较慢。
+ 4. 计算机程序设计语言：用于编程，赋予计算机“行动”的能力。Python有许多发行版本，Anaconda是其中一个，集成了Python中与科学计算和数据科学有关的常用模块。**简言之，安装Anaconda等同于搭建（安装）Python环境，省去了一大堆麻烦。**
+
+---
+### 2. 安装
+使用VPN访问Anaconda官网。[https://www.continuum.io/downloads](https://www.continuum.io/downloads)选择合适的版本，俱乐部官方支持Python2.7版本。安装64位还是32位的版本取决于你的操作系统。偷懒的办法是，安装32位的版本，它能同时在32位和64位的操作系统上运行。安装的过程非常简单，除修改安装路径外，其余全部建议按默认情况（一直点下一步下一步下一步…）
+
+---
+### 3. 检查是否安装成功
+ 1. 以**Windows**为例，按下**Win+R**并输入**cmd**，然后按下回车。弹出窗口：
+{% load static %}
+![]({% static "img/installpython/installpython_1.jpg"%})
+ 2. 输入python --version并回车。或者直接输入python并回车，进入Python命令行写代码模式。
+{% load static %}
+![]({% static "img/installpython/installpython_2.jpg"%})

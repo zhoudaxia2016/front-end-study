@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+li{
+  list-style: none;
+}
+*{margin: 0;padding: 0;}
+.main{
+  width: 400px;
+  margin: 100px auto;
+  height: 50px;
+}
+.main>li{
+  float: left;
+  width: 100px;
+  background: #0af;
+  margin: 0;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown>ul{
+  position: absolute;
+  visibility: hidden;
+  min-width: 150%;
+  top: 100%;
+  left: 0;
+  background: #00a;
+  transition: all .5s;
+  opacity: 0;
+}
+.dropdown:hover ul{
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown li{
+  border: 1px solid;
+  list-style: none;
+}
+
+.main2{
+  width: 100px;
+  margin: 200px auto;
+  background: #aaf;
+  height: 50px;
+}
+.main2>li{
+  width: 100px;
+  background: #0af;
+  margin: 0;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+.right-pull{
+  position: relative;
+}
+.right-pull>ul{
+  background: #11a;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+}
+.right-pull:hover ul{
+  display: block;
+} 
+
+
+  </style>
+</head>
+<body>
+  <ul class='main'>
+    <li class='dropdown'>
+      item1
+      <ul>
+        <li>subItem1</li>
+        <li>subItem2</li>
+        <li>subItem3</li>
+      </ul>
+    </li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <ul class='main2'>
+    <li class='right-pull'>
+    English
+      <ul>
+        <li>people</li>
+        <li>fish</li>
+        <li>coco</li>
+      </ul>
+    </li>
+    <li class='right-pull'>Math
+      <ul>
+        <li>add</li>
+        <li>minus</li>
+        <li>one</li>
+      </ul>
+    </li>
+    <li>Chinese</li>
+  </ul>
+</body>
+</html>

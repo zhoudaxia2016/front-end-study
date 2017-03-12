@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+<!-- 门颜色要在样式表里修改 ~~ -->
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.ic-home{
+  --home-color: #0aa;
+  background: var(--home-color);
+  width: var(--home-width);
+  height: calc(var(--home-width) * 0.8);
+  position: relative;
+}
+.ic-home::before{
+  position: absolute;
+  bottom: 100%;
+  left: calc(var(--home-width) * -0.2);
+  content: '';
+  border: calc(var(--home-width) * 0.7) solid transparent;
+  border-bottom-color: var(--home-color);
+}
+.ic-home::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: calc(var(--home-width) * 0.3);
+  width: calc(var(--home-width) * 0.4);
+  height: calc(var(--home-width) * 0.5);
+  background: #fff;
+}
+.small{
+  --home-width: 10px;
+}
+.middle{
+  --home-width: 20px;
+}
+.big{
+  --home-width: 30px;
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-home small"></div>
+  <div class="ic-home middle"></div>
+  <div class="ic-home big"></div>
+</div>
+</body>
+</html>

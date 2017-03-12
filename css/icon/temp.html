@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.smallest{
+  --zzz-width: 10px;
+  --zzz-color: #000;
+}
+.small{
+  --zzz-width: 13px;
+  --zzz-color: #004;
+}
+.medium{
+  --zzz-width: 16px;
+  --zzz-color: #008;
+}
+.big{
+  --zzz-width: 19px;
+  --zzz-color: #00b;
+}
+.bigest{
+  --zzz-width: 22px;
+  --zzz-color: #00f;
+}
+.ic-zzz{
+  width: var(--zzz-width);
+  height: calc(var(--zzz-width) * 0.7);
+  background: var(--zzz-color);
+  position: relative;
+}
+.ic-zzz::before{
+  width: calc(var(--zzz-width) * 0.5);
+  height: calc(var(--zzz-width) * 0.2);
+  position: absolute;
+  top: calc(var(--zzz-width) * -0.2);
+  left: calc(var(--zzz-width) * 0.25);
+  background: var(--zzz-color);
+  content: '';
+}
+.ic-zzz::after{
+  width: calc(var(--zzz-width) * 0.5);
+  height: calc(var(--zzz-width) * 0.5);
+  position: absolute;
+  top: calc(var(--zzz-width) * 0.1);
+  left: calc(var(--zzz-width) * 0.25);
+  background: var(--zzz-color);
+  content: '';
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-zzz smallest"></div>
+  <div class="ic-zzz small"></div>
+  <div class="ic-zzz medium"></div>
+  <div class="ic-zzz big"></div>
+  <div class="ic-zzz bigest"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* all.css */
+
+.art-list{
+    width: 1000px;
+    margin: 100px auto;
+}
+.art-list li{
+    list-style: none;
+    border-bottom: 1px dotted #ddd;
+    height: 51px;
+    margin-bottom: 40px;
+}
+.art-list li *{
+    display: inline-block;
+}
+.title h2{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.title:hover{
+    color: #aaa;
+}
+.published-time{
+    font-szie: 14px;
+    line-height: 30px;
+    text-align: right;
+    width: 130px;
+}
+.view-num{
+    font-size: 14px;
+    line-height: 30px;
+    text-align: right;
+    width: 130px;
+    color: #999;
+}
+

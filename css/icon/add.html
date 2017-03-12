@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.small{
+  --add-width: 10px;
+  --add-color: #00a;
+  --add-plus-color: #bbf;
+}
+.middle{
+  --add-width: 15px;
+  --add-color: #0a0;
+  --add-plus-color: #bfb;
+}
+.big{
+  --add-width: 20px;
+  --add-color: #a00;
+  --add-plus-color: #fbb;
+}
+.ic-add{
+  background: var(--add-color);
+  width: var(--add-width);
+  height: var(--add-width);
+  border-radius: var(--add-width);
+  position: relative;
+}
+.ic-add::before{
+  width: calc(var(--add-width) * 0.6);
+  height: calc(var(--add-width) * 0.2);
+  background: var(--add-plus-color);
+  background: var(--add-plus-color);
+  position: absolute;
+  top: calc(var(--add-width) * 0.4);
+  left: calc(var(--add-width) * 0.2);
+  content: '';
+}
+.ic-add::after{
+  height: calc(var(--add-width) * 0.6);
+  width: calc(var(--add-width) * 0.2);
+  background: var(--add-plus-color);
+  background: var(--add-plus-color);
+  position: absolute;
+  left: calc(var(--add-width) * 0.4);
+  top: calc(var(--add-width) * 0.2);
+  content: '';
+}
+
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-add small"></div>
+  <div class="ic-add middle"></div>
+  <div class="ic-add big"></div>
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.smallest{
+  --heart-width: 10px;
+  --heart-color: #000;
+}
+.small{
+  --heart-width: 13px;
+  --heart-color: #004;
+}
+.medium{
+  --heart-width: 16px;
+  --heart-color: #008;
+}
+.big{
+  --heart-width: 19px;
+  --heart-color: #00b;
+}
+.bigest{
+  --heart-width: 22px;
+  --heart-color: #00f;
+}
+.ic-heart{
+  border-radius: var(--heart-width) var(--heart-width) 0 0;
+  width: calc(var(--heart-width) * 0.65);
+  height: var(--heart-width);
+  position: relative;
+  background: var(--heart-color);
+  transform: rotate(-45deg);
+}
+.ic-heart::before{
+  border-radius: 0 var(--heart-width) var(--heart-width) 0;
+  height: calc(var(--heart-width) * 0.65);
+  width: var(--heart-width);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--heart-color);
+  content: '';
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-heart smallest"></div>
+  <div class="ic-heart small"></div>
+  <div class="ic-heart medium"></div>
+  <div class="ic-heart big"></div>
+  <div class="ic-heart bigest"></div>
+</div>
+
+</body>
+</html>

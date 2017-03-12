@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+}
+.small{
+  --flag-width: 10px;
+  --flag-color: #00a;
+}
+.middle{
+  --flag-width: 15px;
+  --flag-color: #0a0;
+}
+.big{
+  --flag-width: 20px;
+  --flag-color: #a00;
+}
+.ic-flag{
+  height: var(--flag-width);
+  width: calc(var(--flag-width) * 0.2);
+  background: var(--flag-color);
+  position: relative;
+}
+.ic-flag::before{
+  width: calc(var(--flag-width) * 0.7);
+  height: calc(var(--flag-width) * 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--flag-color);
+  content: '';
+}
+.ic-flag::after{
+  width: calc(var(--flag-width) * 0.5);
+  height: calc(var(--flag-width) * 0.5);
+  position: absolute;
+  top: calc(var(--flag-width) * 0.2);
+  left: calc(var(--flag-width) * 0.5);
+  background: var(--flag-color);
+  content: '';
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="ic-flag small"></div>
+  <div class="ic-flag middle"></div>
+  <div class="ic-flag big"></div>
+</div>
+
+</body>
+</html>

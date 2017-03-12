@@ -1,0 +1,20 @@
+/* index.css */
+
+/* ---------------------------- */
+.banner{
+  margin-top: 50px;
+  background: url(/static/imgs/banner.gif) repeat;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+.logo{
+  height: 81px;
+  width: 140px;
+  margin-top: 109.5px;
+}
+.article .msg{
+    margin-top: 30px;
+}
+/* --------banner-logo--------- */
+

@@ -1,0 +1,88 @@
+/* article.css */
+
+/* ---------------------------- */
+.article{
+  width: 1000px;
+  margin: auto;
+}
+.not-index{
+    margin-top: 80px;
+}
+.msg{
+  line-height: 30px;
+  font-weight: bold;
+}
+.title{
+  font-size: 26px;
+  display: inline-block;
+}
+.published-time{
+  margin-left: 40px;
+  display: inline-block;
+}
+.comment-count{
+  margin-left: 30px;
+  display: inline-block;
+}
+.view-num{
+  margin-left: 25px;
+  display: inline-block;
+}
+span{
+  font-weight: normal;
+}
+.main p{
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+.main p:last-child{
+  clear: both;
+  text-align: right;
+}
+
+.cmt{
+  width: 1000px;
+  margin: 50px auto;
+}
+.cmt textarea{
+  font-size: 20px;
+  line-heght: 30px;
+  width: 100%;
+}
+.cmt input{
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.history{
+  margin-top: 30px;
+}
+.item{
+  position: relative;
+  margin: 0 0 50px 50px;
+}
+.comment-publish_time{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #50f;
+}
+.comment-user{
+  color: #0af;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.comment-content{
+  margin-bottom: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* ----------article-------------- */
+
+

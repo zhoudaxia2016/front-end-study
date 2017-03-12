@@ -1,0 +1,28 @@
+*{margin: 0;}
+
+body{
+    background: #ebc9a3;
+}
+.form{
+    width: 300px;
+    margin: 200px auto;
+    background: #3f6ec0;
+    border: 2px solid #928d89;
+    border-radius: 2px;
+    text-align: center;
+}
+.h2{
+    text-align: center;
+    margin-top: 20px;
+}
+input:not(.submit){
+    background: #283955;
+    color: #fff;
+}
+.submit{
+    background: #afc7f3;
+    color: #283955;
+}
+input{
+    margin: 20px 20px 0 20px;
+}
