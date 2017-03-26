@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+img{
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+@keyframes carousel{
+  0%,17%{
+    left: 0;
+  }
+  27%,44%{
+    left: -100%;
+  }
+  54%,71%{
+    left: -200%;
+  }
+  81%,100%{
+    left: -300%;
+  }
+}
+
+.wrap{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+
+.carousel{
+  width: 1200px;
+  position: absolute;
+  animation: carousel 11s alternate infinite;
+  top: 0;
+  left: 0;
+}
+  </style>
+</head>
+<body>
+<div class=wrap>
+  <div class="carousel">
+    <img src="1.jpg" alt=""></img>
+    <img src="2.jpg" alt=""></img>
+    <img src="background1.png" alt=""></img>
+    <img src="background2.png" alt=""></img>
+  </div>
+</div>
+  <script>
+  </script>
+</body>
+</html>

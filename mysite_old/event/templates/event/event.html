@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maozz's blog</title>
+  {% load static %}
+  <link href="{% static 'blog/css/base.css' %}" rel="stylesheet">
+  <link href="{% static 'event/css/event.css' %}" rel="stylesheet">
+  <script src="{% static 'blog/js/base.js' %}"></script>
+</head>
+<body>
+{% include 'common/nav.html' %}
+
+<div class="container">
+  <div class="content">
+    <h2>建站日志</h2>
+    <div class="trunk">
+      {% for item in events %}
+        {% if item.ismajor %}
+          <div class="branch major">
+            <span class="event-time">{{ item.publish_time | date:'Y-g-j' }}&nbsp&nbsp</span>
+            <span class="event-description">{{ item.description }}</span>
+            {% if item.url %}
+            <a href="{{ item.url }}" class="event-detail">detail</a>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="branch minor">
+            <span class="event-time">{{ item.publish_time | date:'Y-g-j'}}&nbsp&nbsp</span>
+            <span class="event-description">{{ item.description }}</span>
+            {% if item.url %}
+            <a href="{{ item.url }}" class="event-detail">detail</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include 'common/footer.html' %}
+{% include 'common/login.html' %}
+</body>
+</html>
+

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+.btns{
+  position: fixed;
+  top: 100px;
+  left: 0;
+}
+.btn{
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+  background: #3a3a62;
+  border: none;
+  border-radius: 3px;
+  color: #aaa;
+  box-shadow: 2px 2px 5px #aaa;
+  position: relative;
+}
+.current{
+  background: #2aaf7a;
+  color: #000;
+}
+.btn:hover{
+  color: #ddd;
+}
+.btn:active{
+  outline: none;
+  border: none;
+  color: #eee;
+  top: 2px;
+  left: 2px;
+  width: 48px;
+  height: 28px;
+}
+
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+.container *{
+  margin: 100px;
+  --add-plus-color: #fff;
+  --photo-circle-color: #fff;
+}
+
+.smallest{
+  --width: 10px;
+  --color: #000;
+}
+.small{
+  --width: 13px;
+  --color: #004;
+}
+.medium{
+  --width: 16px;
+  --color: #008;
+}
+.big{
+  --width: 19px;
+  --color: #00b;
+}
+.bigest{
+  --width: 22px;
+  --color: #00f;
+}
+
+.ic-add{
+  background: var(--color);
+  width: var(--width);
+  height: var(--width);
+  border-radius: var(--width);
+  position: relative;
+}
+.ic-add::before{
+  width: calc(var(--width) * 0.6);
+  height: calc(var(--width) * 0.2);
+  background: var(--add-plus-color);
+  background: var(--add-plus-color);
+  position: absolute;
+  top: calc(var(--width) * 0.4);
+  left: calc(var(--width) * 0.2);
+  content: '';
+}
+.ic-add::after{
+  height: calc(var(--width) * 0.6);
+  width: calc(var(--width) * 0.2);
+  background: var(--add-plus-color);
+  background: var(--add-plus-color);
+  position: absolute;
+  left: calc(var(--width) * 0.4);
+  top: calc(var(--width) * 0.2);
+  content: '';
+}
+
+.ic-heart{
+  border-radius: var(--width) var(--width) 0 0;
+  width: calc(var(--width) * 0.65);
+  height: var(--width);
+  position: relative;
+  background: var(--color);
+  transform: rotate(-45deg);
+}
+.ic-heart::before{
+  border-radius: 0 var(--width) var(--width) 0;
+  height: calc(var(--width) * 0.65);
+  width: var(--width);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--color);
+  content: '';
+}
+
+.ic-mul{
+  width: calc(var(--width) * 0.2);
+  height: var(--width);
+  background: var(--color);
+  border-radius: var(--width);
+  position: relative;
+}
+.ic-mul::before{
+  width: calc(var(--width) * 0.2);
+  height: var(--width);
+  position: absolute;
+  transform: rotate(-55deg);
+  top: 0;
+  left: 0;
+  background: var(--color);
+  content: '';
+  border-radius: var(--width);
+}
+.ic-mul::after{
+  width: calc(var(--width) * 0.2);
+  height: var(--width);
+  position: absolute;
+  transform: rotate(55deg);
+  top: 0;
+  left: 0;
+  background: var(--color);
+  content: '';
+  border-radius: var(--width);
+}
+
+.ic-flag{
+  height: var(--width);
+  width: calc(var(--width) * 0.2);
+  background: var(--color);
+  position: relative;
+}
+.ic-flag::before{
+  width: calc(var(--width) * 0.7);
+  height: calc(var(--width) * 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color);
+  content: '';
+}
+.ic-flag::after{
+  width: calc(var(--width) * 0.5);
+  height: calc(var(--width) * 0.5);
+  position: absolute;
+  top: calc(var(--width) * 0.2);
+  left: calc(var(--width) * 0.5);
+  background: var(--color);
+  content: '';
+}
+
+
+.ic-home{
+  --color: #0aa;
+  background: var(--color);
+  width: var(--width);
+  height: calc(var(--width) * 0.8);
+  position: relative;
+}
+.ic-home::before{
+  position: absolute;
+  bottom: 100%;
+  left: calc(var(--width) * -0.18);
+  content: '';
+  border: calc(var(--width) * 0.7) solid transparent;
+  border-bottom-color: var(--color);
+}
+.ic-home::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: calc(var(--width) * 0.3);
+  width: calc(var(--width) * 0.4);
+  height: calc(var(--width) * 0.5);
+  background: #fff;
+}
+
+.ic-photo{
+  width: var(--width);
+  height: calc(var(--width) * 0.7);
+  background: var(--color);
+  position: relative;
+}
+.ic-photo::before{
+  width: calc(var(--width) * 0.5);
+  height: calc(var(--width) * 0.2);
+  position: absolute;
+  top: calc(var(--width) * -0.2);
+  left: calc(var(--width) * 0.25);
+  background: var(--color);
+  content: '';
+}
+.ic-photo::after{
+  width: calc(var(--width) * 0.5);
+  height: calc(var(--width) * 0.5);
+  position: absolute;
+  top: calc(var(--width) * 0.1);
+  left: calc(var(--width) * 0.25);
+  background: var(--photo-circle-color);
+  border-radius: var(--width);
+  content: '';
+}
+
+.ic-power{
+  position: relative;
+  width: var(--width);
+  height: var(--width);
+  border: calc(var(--width) * 0.2) solid var(--color);
+  border-radius: var(--width);
+  background: transparent;
+}
+.ic-power::before{
+  height: calc(var(--width) * 0.7);
+  width: calc(var(--width) * 0.2);
+  background: var(--color);
+  position: absolute;
+  content: '';
+  top: calc(var(--width) * -0.3);
+  left: calc(var(--width) * 0.4);
+  box-shadow: calc(var(--width) * 0.2) 0 #fff, calc(var(--width) * -0.2) 0 #fff;
+} 
+
+.ic-search{
+  width: var(--width);
+  height: var(--width);
+  border: calc(var(--width) * 0.2) solid var(--color);
+  background: transparent;
+  border-radius: var(--width);
+  position: relative;
+}
+.ic-search::before{
+  width: var(--width);
+  height: calc(var(--width) * 0.2);
+  position: absolute;
+  bottom: calc(var(--width) * -0.3);
+  left: calc(var(--width) * 0.7);
+  background: var(--color);
+  transform: rotate(45deg);
+  content: '';
+}
+
+.ic-trash::after{
+  width: var(--width);
+  height: calc(var(--width) * 0.2);
+  border-top-left-radius: calc(var(--width) * 0.05);
+  border-top-right-radius: calc(var(--width) * 0.05);
+  background: var(--color);
+  position: absolute;
+  bottom: var(--width);
+  left: calc(var(--width) * -0.2);
+  content: '';
+}
+.ic-trash::before{
+  width: calc(var(--width) * 0.4);
+  height: calc(var(--width) * 0.2);
+  position: absolute;
+  bottom: calc(var(--width) * 1.2);
+  left: calc(var(--width) * 0.1);
+  background: var(--color);
+  content: '';
+}
+.ic-trash:hover::before{
+  transform: rotate(10deg);
+  transform-origin: right top;
+  transition: all 1s;
+}
+.ic-trash:hover::after{
+  transform: rotate(10deg);
+  transform-origin: right top;
+  transition: all 1s;
+}
+.ic-trash{
+  width: calc(var(--width) * 0.6);
+  border-top: calc(var(--width) * 1) solid var(--color);
+  border-left: calc(var(--width) * 0.1) solid transparent;
+  border-right: calc(var(--width) * 0.1) solid transparent;
+  position: relative;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="btns">
+    <input type="button" value="添加" class="btn">
+    <input type="button" value="爱心" class="btn">
+    <input type="button" value="乘号" class="btn">
+    <input type="button" value="旗帜" class="btn">
+    <input type="button" value="home" class="btn current">
+    <br>
+    <input type="button" value="照相机" class="btn">
+    <input type="button" value="电量" class="btn">
+    <input type="button" value="搜索" class="btn">
+    <input type="button" value="垃圾桶" class="btn">
+
+  </div>
+  
+  <div class="container">
+  </div>
+
+  <script>
+var icons = ['add','heart','mul','flag','home','photo','power','search','trash'];
+var html = `
+    <div class="ic-zzz smallest"></div>
+    <div class="ic-zzz small"></div>
+    <div class="ic-zzz medium"></div>
+    <div class="ic-zzz big"></div>
+    <div class="ic-zzz bigest"></div>`
+
+var h = html.replace(/zzz/g,'home');
+document.getElementsByClassName('container')[0].innerHTML = h;
+var current = 4;
+
+var btns = document.getElementsByClassName('btn');
+for(let i=0; i<btns.length; i++){
+  btns[i].onclick = function(e){
+    var h = html.replace(/zzz/g,icons[i]);
+    document.getElementsByClassName('container')[0].innerHTML = h;
+    this.parentNode.getElementsByClassName('btn')[current].className = 'btn';
+    this.className = 'current btn';
+    current = i;
+  }
+}
+
+  </script>
+</body>
+</html>

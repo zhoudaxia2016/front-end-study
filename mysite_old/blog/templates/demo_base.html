@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maozz's Demo</title>
+  {% load static %}
+  <link href="{% static 'blog/css/remark.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/css/demo.css' %}" rel="stylesheet">
+  <style>
+  {% block css %}
+  {% endblock %}
+  </style>
+</head>
+<body>
+<div class="back"><a href="/index.html">Go Home</a></div>
+{% block body %}
+{% endblock %}
+
+{% include 'common/footer.html' %}
+
+<script>
+{% block js %}
+{% endblock %}
+</script>
+
+{% include 'common/demo_remark.html' %}
+</body>
+</html>

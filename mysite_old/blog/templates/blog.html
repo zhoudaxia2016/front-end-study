@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  <link href="{% static 'blog/css/base.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/css/remark.css' %}" rel="stylesheet">
+  <script src="{% static 'blog/js/base.js' %}"></script>
+  <title>Maozz's blog</title>
+</head>
+<body>
+{% include 'common/nav.html' %}
+<div class="container">
+  <div class="blog">
+    <h2>{{ blog.title }}</h2>
+    <div class="msg">
+      <span class="publish-date">发表于&nbsp&nbsp{{ blog.publish_time | date:'Y-g-j' }}</span>
+      <span class="view">阅读&nbsp&nbsp{{ blog.view }}</span>
+      <div class="tags">
+        <span>标签</span>
+        {% for tag in blog.tags.all %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="content">
+    {{ blog.content | safe }}
+    </div>
+  </div>
+</div>  
+{% include 'common/footer.html' %}
+{% include 'common/login.html' %}
+{% include 'common/blog_remark.html' %}
+</body>
+</html>

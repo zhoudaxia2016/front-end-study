@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The drama list Maozz watched or watching</title>
+  <link href="/static/css/index.css" rel="stylesheet">
+  <script src="http://cdn.bootcss.com/vue/2.2.4/vue.min.js"></script>
+  <script src="http://cdn.bootcss.com/vue-resource/1.2.1/vue-resource.min.js"></script>
+</head>
+<body>
+  <div class="drama-list">
+    <h1>Drama List</h1>
+    <div class="content">
+      <input v-on:keyup.enter='add($event)' class="update" autofocus placeholder="What did you watch recently?" type="text">
+
+      <ul>
+        <template v-if='(item.isSeen === show && item.type === type) || (all && allType) || (all && item.type === type) || (allType && item.isSeen === show)' v-for='item in dramas'>
+        <li>
+        <div v-bind:class='{isSeen:item.isSeen,isActive:!item.isSeen}' v-on:click='isSeen(item)'></div>
+          [[ item.name ]]
+        <div class="remove" v-on:click='remove(item)'></div>
+        </li>
+        </template>
+
+
+      </ul>
+
+    <div class="toggle">
+      <div class="number">[[ count ]] items</div>
+      <input v-bind:class='{focus: all}' type="button" v-on:click='toggle(-1)' value="All">
+      <input v-bind:class='{focus: (!all && show===0)}' type="button" v-on:click='toggle(0)' value="Active">
+      <input v-bind:class='{focus: (!all && show===1)}' type="button" v-on:click='toggle(1)' value="Seen">
+    </div>
+
+    <div class="toggle">
+      <input v-bind:class='{focus: allType}' type="button" v-on:click='toggleType(-1)' value="All">
+      <input v-bind:class='{focus: (!allType && type===0)}' type="button" v-on:click='toggleType(0)' value="美剧">
+      <input v-bind:class='{focus: (!allType && type===1)}' type="button" v-on:click='toggleType(1)' value="中国">
+      <input v-bind:class='{focus: (!allType && type===2)}' type="button" v-on:click='toggleType(2)' value="日剧">
+      <input v-bind:class='{focus: (!allType && type===3)}' type="button" v-on:click='toggleType(3)' value="韩剧">
+      <input v-bind:class='{focus: (!allType && type===4)}' type="button" v-on:click='toggleType(4)' value="泰剧">
+      <input class="upload" type="button" v-on:click='upload' value="upload">
+    </div>
+  </div>
+  <script src='/static/js/index.js'>
+  </script>
+</body>
+</html>

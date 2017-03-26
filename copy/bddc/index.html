@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+*{margin: 0;padding: 0;}
+body{
+  scroll-behavior: smooth;
+}
+.banner{
+  background: url(banner.jpg);
+  height: 740px;
+  width: 1351px;
+}
+.bg-trp{
+  width: 100%;
+  height: 152px;
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bg-opa{
+  width: 100%;
+  opacity: 1;
+  height: 92px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s linear;
+  opacity: 0.95;
+  z-index: 3;
+}
+nav{
+  width: 900px;
+  position: fixed;
+  margin-left: 225px;
+  transition: margin-top 0.5s linear;
+}
+.trp{
+  margin-top: 40px;
+}
+.opa{
+  margin-top: 10px;
+}
+nav *{
+  display: inline-block;
+}
+.logo{
+  background: url(logo-icon.png);
+  background-position: 71px -1px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+}
+nav h1{
+  background: url(logo-icon.png);
+  margin-bottom: 11px;
+  width: 111px;
+  height: 50px;
+  background-position: 0 -75px;
+}
+nav ul{
+  float: right;
+  height: 72px;
+}
+nav li a{
+  margin: 0 20px;
+  font-size: 18px;
+  line-height: 72px;
+}
+.trp a{
+  color: #fff;
+}
+.opa a{
+  color: #888;
+}
+a:link{
+  text-decoration: none;
+}
+  
+
+.download{
+  width: 500px;
+  margin: 80px auto;
+}
+.download-btn{
+  width: 220px;
+  height: 70px;
+  background: #fb6642;
+  color: #fff;
+  font-size: 20px;
+  line-height: 70px;  
+  border-radius: 4px;
+  text-align: center;
+}
+.download-btn:hover{
+  background: #f5461c;
+}
+.apple{
+  float: left;
+}
+.android{
+  float: right;
+}
+
+.func-wrap{
+  width: 960px;
+  margin: 240px auto;
+  clear: both;
+}
+.func-wrap .item{
+  height: 520px;
+  margin-top: 100px;
+  position: relative;
+}
+.func-wrap .item::before,
+.func-wrap .item::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  height: 100%;
+  border: solid #ccc;
+}
+.func-wrap .item:nth-child(odd)::before{
+  left: 0;
+  width: 40px;
+  border-width: 0 2px 1px 0;
+}
+.func-wrap .item:nth-child(odd)::after{
+  right: 0;
+  width: 500px;
+  border-width: 0 0 1px 2px;
+}
+.func-wrap .item:nth-child(even)::before{
+  left: 0;
+  width: 500px;
+  border-width: 0 2px 1px 0;
+}
+.func-wrap .item:nth-child(even)::after{
+  right: 0;
+  width: 40px;
+  border-width: 0 0 1px 2px;
+}
+
+.func-wrap .item{
+  position: relative;
+}
+.func-wrap .item:nth-child(odd) img{
+  left: 80px;
+}
+.func-wrap .item:nth-child(even) img{
+  right: 80px;
+}
+.func-wrap .item img{
+  width: 340px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+@keyframes item-1{
+  0%,40%,100%{
+    opacity: 1;
+  }
+  50%,90%{
+    opacity: 0;
+  }
+}
+.func-wrap .item img:nth-child(1){
+  opacity: 1;
+  animation: item-1 10s linear infinite;
+}
+.func-wrap .item img:nth-child(2){
+  opacity: 0;
+  animation: item-1 10s -5s linear infinite;
+}
+
+.content{
+  position: absolute;
+  top: 40%;
+  width: 400px;
+}
+.content p{
+  margin-top: 20px;
+  font-size: 18px;
+  color: #aaa;
+}
+.func-wrap .item:nth-child(odd) .content{
+  right: 20px;
+}
+.func-wrap .item:nth-child(even) .content{
+  left: 20px;
+}
+
+@keyframes many{
+  0%,16%,100%{
+    opacity: 1;
+  }
+  20%,96%{
+    opacity: 0;
+  }
+}
+#many img{
+}
+
+#many img:nth-of-type(1){
+  animation: many 25s -0s linear infinite;
+  opacity: 1;
+}
+#many img:nth-of-type(2){
+  animation: many 25s -5s linear infinite;
+  opacity: 0;
+}
+#many img:nth-of-type(3){
+  animation: many 25s -10s linear infinite;
+  opacity: 0;
+}
+#many img:nth-of-type(4){
+  animation: many 25s -15s linear infinite;
+  opacity: 0;
+}
+#many img:nth-of-type(5){
+  animation: many 25s -20s linear infinite;
+  opacity: 0;
+}
+
+
+  </style>
+  <script>
+window.onload = function(e){
+  if (document.body.scrollTop > 1){
+    document.getElementsByTagName('nav')[0].className = 'opa';
+    document.getElementsByClassName('bg')[0].className = 'bg bg-opa';
+  }
+  else{
+    document.getElementsByTagName('nav')[0].className = 'trp';
+    document.getElementsByClassName('bg')[0].className = 'bg bg-trp';
+  }
+}
+
+
+  </script>
+</head>
+<body>
+  <div class="banner">
+    <div class='bg bg-trp'>
+    <nav class=trp>
+      <div class="logo"></div>
+      <h1></h1>
+      <ul>
+        <li><a href="#func">功能</a></li>
+        <li><a href="">获得奖项</a></li>
+        <li><a href="">媒体报道</a></li>
+        <li><a href="">用户评价</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+
+  <div class='download'>
+    <div class="download-btn apple">App Store下载</div>
+    <div class="download-btn android">Android 下载</div>
+  </div>
+
+  <div id=func class="func-wrap">
+    <div class="item">
+      <img src="item1-1.jpg" alt=""></img>
+      <img src="item1-2.jpg" alt=""></img>
+      <div class="content">
+        <h2>强化学习</h2>
+        <p>单词测试间隔时间依次加长，逐步巩固瞬间记忆，达到长效记忆的效果</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="item2-1.jpg" alt=""></img>
+      <img src="item1-2.jpg" alt=""></img>
+      <div class="content">
+        <h2>智能复习</h2>
+        <p>自动测算单词掌握程度，精准安排每个词的
+        复习计划，最短学习时间达到最佳记忆效果<p>
+      </div>
+    </div>
+    <div class="item" id=many>
+      <div class=content>
+        <h2>个性化主题和壁纸</h2>
+        <p>每次打开学习，都有不一样的感觉</p>
+      </div>
+      <img src="item4-1.jpg" alt=""></img>
+      <img src="item4-2.jpg" alt=""></img>
+      <img src="item4-3.jpg" alt=""></img>
+      <img src="item4-4.jpg" alt=""></img>
+      <img src="item4-5.jpg" alt=""></img>
+    </div>
+  </div>
+
+<script>
+window.onscroll = function(e){
+  if (document.body.scrollTop > 1){
+    document.getElementsByTagName('nav')[0].className = 'opa';
+    document.getElementsByClassName('bg')[0].className = 'bg bg-opa';
+  }
+  else{
+    document.getElementsByTagName('nav')[0].className = 'trp';
+    document.getElementsByClassName('bg')[0].className = 'bg bg-trp';
+  }
+}
+
+var links = document.querySelectorAll('a[href^="#"]');
+links.forEach(function(ele){
+    var target = document.getElementById(ele.getAttribute('href').substring(1));
+    ele.addEventListener('click',function(e){
+      e.preventDefault();
+      window.scroll({"behavior": "smooth", "top": target.offsetTop,'left': 0});
+      });
+    });
+    
+</script>
+</body>
+</html>

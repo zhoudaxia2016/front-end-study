@@ -1,0 +1,38 @@
+.container h2{
+  text-align: center;
+  padding: 15px;
+  border-bottom: #aaa solid 2px;
+  font-weight: bold;
+}
+.content{
+  margin: 50px 100px;
+  width: 750px;
+  background: #fff;
+  box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 50px;
+}
+.content *{
+  margin: 20px;
+}
+.content h3{
+  position: relative;
+  color: #444;
+}
+.content h3::before{
+  position: absolute;
+  width: 5px;
+  height: 140%;
+  content: '';
+  top: -20%;
+  left: -10px;
+  background: #444;
+}
+.point{
+  margin-bottom: 35px;
+}
+.point p{
+  text-indent: 2em;
+  line-height: 25px;
+  font-size: 18px;
+}
+

@@ -1,0 +1,755 @@
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:01:38 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xb20cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+120.236.163.70 - - [24/Mar/2017 18:02:36] "GET / HTTP/1.1" 200 214
+120.236.163.70 - - [24/Mar/2017 18:05:59] "GET / HTTP/1.1" 200 214
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:07:03 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2553cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "./dramalist.py", line 8, in <module>
+    bottle.run(reload=True,host='0.0.0.0',port=9001,app=app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 3127, in run
+    server.run(app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 2781, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 153, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 453, in __init__
+    self.server_bind()
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 467, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 22959, cores: 1)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:08:47 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x16adcb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "./dramalist.py", line 8, in <module>
+    bottle.run(reload=True,host='0.0.0.0',port=9001,app=app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 3127, in run
+    server.run(app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 2781, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 153, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 453, in __init__
+    self.server_bind()
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 467, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 23040, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 23040|app: -1|req: -1/1] 120.236.163.70 () {44 vars in 795 bytes} [Fri Mar 24 18:08:52 2017] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:10:52 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1c26cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "./dramalist.py", line 8, in <module>
+    bottle.run(reload=True,host='0.0.0.0',port=9001,app=app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 3127, in run
+    server.run(app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 2781, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 153, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 453, in __init__
+    self.server_bind()
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 467, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 23192, cores: 1)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:14:25 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2164cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [24/Mar/2017 18:14:29] code 400, message Bad request syntax ('\x00\x1b\x03\x00\x0c\x00QUERY_STRING\x00\x00\x0e\x00REQUEST_METHOD\x03\x00GET\x0c\x00CONTENT_TYPE\x00\x00\x0e\x00CONTENT_LENGTH\x00\x00\x0b\x00REQUEST_URI\x01\x00/\t\x00PATH_INFO\x01\x00/\r\x00DOCUMENT_ROOT\x0f\x00/root/dramalist\x0f\x00SERVER_PROTOCOL\x08\x00HTTP/1.1\x0e\x00REQUEST_SCHEME\x04\x00http\x0b\x00REMOTE_ADDR\x0e\x00120.236.163.70\x0b\x00REMOTE_PORT\x04\x004509\x0b\x00SERVER_PORT\x04\x001235\x0b\x00SERVER_NAME\x0e\x00123.207.20.222\t\x00HTTP_HOST\x13\x00123.207.20.222:1235\x0f\x00HTTP_CONNECTION')
+127.0.0.1 - - [24/Mar/2017 18:14:29] "   QUERY_STRING   REQUEST_METHOD GET CONTENT_TYPE   CONTENT_LENGTH   REQUEST_URI /	 PATH_INFO / DOCUMENT_ROOT /root/dramalist SERVER_PROTOCOL HTTP/1.1 REQUEST_SCHEME http REMOTE_ADDR 120.236.163.70 REMOTE_PORT 4509 SERVER_PORT 1235 SERVER_NAME 123.207.20.222	 HTTP_HOST 123.207.20.222:1235 HTTP_CONNECTION" 400 -
+127.0.0.1 - - [24/Mar/2017 18:14:31] code 400, message Bad request syntax ('\x00\x1b\x03\x00\x0c\x00QUERY_STRING\x00\x00\x0e\x00REQUEST_METHOD\x03\x00GET\x0c\x00CONTENT_TYPE\x00\x00\x0e\x00CONTENT_LENGTH\x00\x00\x0b\x00REQUEST_URI\x01\x00/\t\x00PATH_INFO\x01\x00/\r\x00DOCUMENT_ROOT\x0f\x00/root/dramalist\x0f\x00SERVER_PROTOCOL\x08\x00HTTP/1.1\x0e\x00REQUEST_SCHEME\x04\x00http\x0b\x00REMOTE_ADDR\x0e\x00120.236.163.70\x0b\x00REMOTE_PORT\x04\x004509\x0b\x00SERVER_PORT\x04\x001235\x0b\x00SERVER_NAME\x0e\x00123.207.20.222\t\x00HTTP_HOST\x13\x00123.207.20.222:1235\x0f\x00HTTP_CONNECTION')
+127.0.0.1 - - [24/Mar/2017 18:14:31] "   QUERY_STRING   REQUEST_METHOD GET CONTENT_TYPE   CONTENT_LENGTH   REQUEST_URI /	 PATH_INFO / DOCUMENT_ROOT /root/dramalist SERVER_PROTOCOL HTTP/1.1 REQUEST_SCHEME http REMOTE_ADDR 120.236.163.70 REMOTE_PORT 4509 SERVER_PORT 1235 SERVER_NAME 123.207.20.222	 HTTP_HOST 123.207.20.222:1235 HTTP_CONNECTION" 400 -
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:17:17 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e39cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:9001/
+Hit Ctrl-C to quit.
+
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:19:00 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x185dcb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x185dcb0 pid: 23740 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 23740, cores: 1)
+[pid: 23740|app: 0|req: 1/1] 120.236.163.70 () {44 vars in 790 bytes} [Fri Mar 24 18:19:03 2017] GET / => generated 214 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23740|app: 0|req: 2/2] 120.236.163.70 () {44 vars in 791 bytes} [Fri Mar 24 18:24:05 2017] GET / => generated 214 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23740|app: 0|req: 3/3] 120.236.163.70 () {44 vars in 791 bytes} [Fri Mar 24 18:24:07 2017] GET / => generated 214 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23740|app: 0|req: 4/4] 120.236.163.70 () {44 vars in 791 bytes} [Fri Mar 24 18:24:20 2017] GET / => generated 214 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:26:12 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8001 fd 4
+spawned uWSGI http 1 (pid: 24291)
+uwsgi socket 0 bound to TCP address 127.0.0.1:39159 (port auto-assigned) fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xd30da0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "./dramalist.py", line 8, in <module>
+    @app.route('/static/<path:patn>')
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 814, in decorator
+    self.add_route(route)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 773, in add_route
+    self.router.add(route.rule, route.method, route, name=route.name)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 331, in add
+    mask, in_filter, out_filter = self.filters[mode](conf)
+KeyError: 'patn'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24290, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 24290|app: -1|req: -1/1] 120.236.163.70 () {38 vars in 715 bytes} [Fri Mar 24 18:26:20 2017] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24290|app: -1|req: -1/2] 120.236.163.70 () {38 vars in 715 bytes} [Fri Mar 24 18:26:21 2017] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24290|app: -1|req: -1/3] 120.236.163.70 () {38 vars in 699 bytes} [Fri Mar 24 18:26:22 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:27:13 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8001 fd 4
+spawned uWSGI http 1 (pid: 24389)
+uwsgi socket 0 bound to TCP address 127.0.0.1:33605 (port auto-assigned) fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1b5dda0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+Bottle v0.12.13 server starting up (using WSGIRefServer(reload=True))...
+Listening on http://0.0.0.0:8001/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "./dramalist.py", line 12, in <module>
+    bottle.run(host='0.0.0.0',port=8001,reload=True,debug=True)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 3127, in run
+    server.run(app)
+  File "/usr/python3/lib/python3.6/site-packages/bottle.py", line 2781, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 153, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 453, in __init__
+    self.server_bind()
+  File "/usr/python3/lib/python3.6/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/python3/lib/python3.6/socketserver.py", line 467, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24388, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 24388|app: -1|req: -1/1] 120.236.163.70 () {40 vars in 745 bytes} [Fri Mar 24 18:27:16 2017] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24388|app: -1|req: -1/2] 120.236.163.70 () {38 vars in 699 bytes} [Fri Mar 24 18:27:17 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Fri Mar 24 18:45:45 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8001 fd 4
+spawned uWSGI http 1 (pid: 25698)
+uwsgi socket 0 bound to TCP address 127.0.0.1:36522 (port auto-assigned) fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x195dda0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x195dda0 pid: 25697 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 25697, cores: 1)
+[pid: 25697|app: 0|req: 1/1] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:45:47 2017] GET / => generated 286 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 2/2] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:45:47 2017] GET /static/css/index.css => generated 0 bytes in 6 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 3/3] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:46:15 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 4/4] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:46:15 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 5/5] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:46:16 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 6/6] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:11 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 7/7] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:11 2017] GET /static/css/index.css => generated 48 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 146 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 8/8] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:12 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 9/9] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:12 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 10/10] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:16 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 11/11] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:16 2017] GET /static/css/index.css => generated 66 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 146 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 12/12] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:32 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 13/13] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:32 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 14/14] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:43 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 15/15] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:43 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 16/16] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:44 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 17/17] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:44 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 18/18] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:47:49 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 19/19] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:47:50 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 20/20] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:48:01 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 21/21] 120.236.163.70 () {38 vars in 665 bytes} [Fri Mar 24 18:48:01 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 22/22] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:48:02 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 23/23] 120.236.163.70 () {38 vars in 648 bytes} [Fri Mar 24 18:49:11 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 25697|app: 0|req: 24/24] 120.236.163.70 () {38 vars in 664 bytes} [Fri Mar 24 18:49:11 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 25697|app: 0|req: 25/25] 120.236.163.70 () {38 vars in 649 bytes} [Fri Mar 24 18:49:12 2017] GET / => generated 286 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 20:10:53 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address 127.0.0.1 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x148c8a0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x148c8a0 pid: 24129 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24129, cores: 1)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 20:13:51 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2999cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2999cb0 pid: 24326 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24326, cores: 1)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 20:14:01 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2116cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2116cb0 pid: 24329 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24329, cores: 1)
+[pid: 24329|app: 0|req: 1/1] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 20:14:03 2017] GET / => generated 2268 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 2/2] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 20:14:03 2017] GET /static/css/index.css => generated 0 bytes in 8 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 3/3] 120.236.163.70 () {44 vars in 789 bytes} [Sat Mar 25 20:14:03 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 4/4] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 20:14:04 2017] GET /getdramas => generated 14 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 71 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 5/5] 120.236.163.70 () {50 vars in 933 bytes} [Sat Mar 25 20:17:35 2017] POST /postdramas => generated 17 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 6/6] 120.236.163.79 () {42 vars in 904 bytes} [Sat Mar 25 20:18:06 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 7/7] 120.236.163.79 () {42 vars in 896 bytes} [Sat Mar 25 20:18:06 2017] GET /static/css/index.css => generated 2505 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 148 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 8/8] 120.236.163.79 () {42 vars in 877 bytes} [Sat Mar 25 20:18:06 2017] GET /static/js/index.js => generated 3483 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 147 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 9/9] 120.236.163.79 () {42 vars in 863 bytes} [Sat Mar 25 20:18:06 2017] GET /favicon.ico => generated 747 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 10/10] 120.236.163.79 () {44 vars in 935 bytes} [Sat Mar 25 20:18:15 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 11/11] 120.236.163.79 () {46 vars in 982 bytes} [Sat Mar 25 20:18:15 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 12/12] 120.236.163.79 () {46 vars in 963 bytes} [Sat Mar 25 20:18:15 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 13/13] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 20:18:20 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 14/14] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 20:18:20 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 15/15] 120.236.163.70 () {44 vars in 789 bytes} [Sat Mar 25 20:18:20 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 16/16] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 20:18:21 2017] GET /getdramas => generated 158 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 17/17] 120.236.163.70 () {40 vars in 680 bytes} [Sat Mar 25 20:18:45 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 18/18] 120.236.163.70 () {40 vars in 672 bytes} [Sat Mar 25 20:18:45 2017] GET /static/css/index.css => generated 2505 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 148 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 19/19] 120.236.163.70 () {40 vars in 653 bytes} [Sat Mar 25 20:18:45 2017] GET /static/js/index.js => generated 3483 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 147 bytes (0 switches on core 0)
+[pid: 24329|app: 0|req: 20/20] 120.236.163.70 () {42 vars in 704 bytes} [Sat Mar 25 20:18:46 2017] GET /getdramas => generated 158 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 21/21] 120.236.163.70 () {40 vars in 665 bytes} [Sat Mar 25 20:18:46 2017] GET /favicon.ico => generated 747 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 22/22] 120.236.163.70 () {48 vars in 853 bytes} [Sat Mar 25 20:19:06 2017] POST /postdramas => generated 17 bytes in 157 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 23/23] 120.236.163.70 () {42 vars in 712 bytes} [Sat Mar 25 20:19:58 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 24/24] 120.236.163.70 () {42 vars in 705 bytes} [Sat Mar 25 20:19:58 2017] GET /getdramas => generated 206 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24329|app: 0|req: 25/25] 120.236.163.70 () {48 vars in 853 bytes} [Sat Mar 25 20:20:01 2017] POST /postdramas => generated 17 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 20:21:02 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ed2cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1ed2cb0 pid: 24823 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24823, cores: 1)
+[pid: 24823|app: 0|req: 1/1] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 20:21:06 2017] GET / => generated 2268 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 2/2] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 20:21:06 2017] GET /static/css/index.css => generated 2507 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 4 headers in 148 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 3/3] 120.236.163.70 () {44 vars in 789 bytes} [Sat Mar 25 20:21:06 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 4/4] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 20:21:07 2017] GET /getdramas => generated 206 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 5/5] 120.236.163.70 () {50 vars in 933 bytes} [Sat Mar 25 20:21:09 2017] POST /postdramas => generated 17 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 6/6] 120.236.163.70 () {42 vars in 711 bytes} [Sat Mar 25 20:21:50 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 7/7] 120.236.163.70 () {42 vars in 727 bytes} [Sat Mar 25 20:21:50 2017] GET /static/css/index.css => generated 2507 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 148 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 8/8] 120.236.163.70 () {42 vars in 708 bytes} [Sat Mar 25 20:21:50 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 9/9] 120.236.163.70 () {42 vars in 704 bytes} [Sat Mar 25 20:21:50 2017] GET /getdramas => generated 206 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 10/10] 120.236.163.70 () {48 vars in 852 bytes} [Sat Mar 25 20:21:52 2017] POST /postdramas => generated 17 bytes in 65 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 11/11] 120.236.163.70 () {48 vars in 852 bytes} [Sat Mar 25 20:22:06 2017] POST /postdramas => generated 17 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 12/12] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 20:22:10 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 13/13] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 20:22:10 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 14/14] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 20:22:11 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 15/15] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 20:39:20 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 16/16] 120.236.163.70 () {44 vars in 790 bytes} [Sat Mar 25 20:39:20 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 17/17] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 20:39:20 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 18/18] 120.236.163.70 () {44 vars in 786 bytes} [Sat Mar 25 20:39:21 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 19/19] 120.236.163.70 () {42 vars in 761 bytes} [Sat Mar 25 21:27:55 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 20/20] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 21:27:55 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 21/21] 120.236.163.70 () {44 vars in 789 bytes} [Sat Mar 25 21:27:55 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 22/22] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 21:27:56 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 23/23] 120.236.163.70 () {44 vars in 792 bytes} [Sat Mar 25 21:39:33 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 24/24] 120.236.163.70 () {44 vars in 808 bytes} [Sat Mar 25 21:39:33 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 25/25] 120.236.163.70 () {44 vars in 789 bytes} [Sat Mar 25 21:39:33 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 26/26] 120.236.163.70 () {44 vars in 785 bytes} [Sat Mar 25 21:39:35 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 27/27] 120.236.163.70 () {44 vars in 857 bytes} [Sat Mar 25 22:24:28 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 28/28] 120.236.163.70 () {44 vars in 853 bytes} [Sat Mar 25 22:24:28 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 29/29] 120.236.163.70 () {44 vars in 834 bytes} [Sat Mar 25 22:24:28 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 24823|app: 0|req: 30/30] 120.236.163.70 () {44 vars in 830 bytes} [Sat Mar 25 22:24:28 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 31/31] 120.236.163.70 () {44 vars in 857 bytes} [Sat Mar 25 22:28:03 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 32/32] 120.236.163.70 () {44 vars in 830 bytes} [Sat Mar 25 22:28:04 2017] GET /getdramas => generated 184 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 24823|app: 0|req: 33/33] 120.236.163.70 () {50 vars in 978 bytes} [Sat Mar 25 22:32:11 2017] POST /postdramas => generated 17 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+Gracefully killing worker 1 (pid: 24823)...
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 22:35:26 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x28accb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+ModuleNotFoundError: No module named 'dramalist.py'; 'dramalist' is not a package
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 748, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 748|app: -1|req: -1/1] 120.236.163.70 () {46 vars in 887 bytes} [Sat Mar 25 22:35:30 2017] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 748|app: -1|req: -1/2] 120.236.163.70 () {46 vars in 887 bytes} [Sat Mar 25 22:35:32 2017] GET / => generated 21 bytes in 29 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Mar 25 22:36:32 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1f4fcb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1f4fcb0 pid: 828 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 828, cores: 1)
+[pid: 828|app: 0|req: 1/1] 120.236.163.70 () {46 vars in 887 bytes} [Sat Mar 25 22:36:34 2017] GET / => generated 2268 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 2/2] 120.236.163.70 () {44 vars in 829 bytes} [Sat Mar 25 22:36:35 2017] GET /getdramas => generated 628 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 3/3] 120.236.163.70 () {50 vars in 977 bytes} [Sat Mar 25 22:37:50 2017] POST /postdramas => generated 17 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 4/4] 120.236.163.70 () {46 vars in 887 bytes} [Sat Mar 25 22:37:54 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 5/5] 120.236.163.70 () {44 vars in 852 bytes} [Sat Mar 25 22:37:54 2017] GET /static/css/index.css => generated 0 bytes in 7 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 6/6] 120.236.163.70 () {44 vars in 829 bytes} [Sat Mar 25 22:37:55 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 7/7] 120.236.163.79 () {42 vars in 903 bytes} [Sat Mar 25 22:38:41 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 8/8] 120.236.163.79 () {44 vars in 950 bytes} [Sat Mar 25 22:38:41 2017] GET /static/css/index.css => generated 2507 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 4 headers in 148 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 9/9] 120.236.163.79 () {44 vars in 931 bytes} [Sat Mar 25 22:38:41 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 10/10] 120.236.163.79 () {42 vars in 862 bytes} [Sat Mar 25 22:38:44 2017] GET /favicon.ico => generated 747 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 11/11] 120.236.163.70 () {46 vars in 887 bytes} [Sat Mar 25 22:39:31 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 12/12] 120.236.163.70 () {44 vars in 833 bytes} [Sat Mar 25 22:39:31 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 13/13] 120.236.163.70 () {44 vars in 829 bytes} [Sat Mar 25 22:39:32 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 14/14] 180.163.2.119 () {38 vars in 604 bytes} [Sat Mar 25 22:46:59 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 15/15] 61.151.226.202 () {38 vars in 607 bytes} [Sat Mar 25 22:57:01 2017] GET /postdramas => generated 748 bytes in 0 msecs (HTTP/1.1 405) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 16/16] 120.236.163.70 () {46 vars in 888 bytes} [Sat Mar 25 22:59:48 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 17/17] 120.236.163.70 () {44 vars in 853 bytes} [Sat Mar 25 22:59:48 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 18/18] 120.236.163.70 () {44 vars in 834 bytes} [Sat Mar 25 22:59:48 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 19/19] 120.236.163.70 () {44 vars in 830 bytes} [Sat Mar 25 22:59:49 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 20/20] 120.236.163.70 () {46 vars in 885 bytes} [Sat Mar 25 23:09:03 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 21/21] 120.236.163.70 () {44 vars in 827 bytes} [Sat Mar 25 23:09:03 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 22/22] 120.236.163.79 () {42 vars in 904 bytes} [Sun Mar 26 00:22:36 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 828|app: 0|req: 23/23] 120.236.163.79 () {44 vars in 951 bytes} [Sun Mar 26 00:22:36 2017] GET /static/css/index.css => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 24/24] 120.236.163.79 () {44 vars in 932 bytes} [Sun Mar 26 00:22:36 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 828|app: 0|req: 25/25] 120.236.163.79 () {42 vars in 863 bytes} [Sun Mar 26 00:22:36 2017] GET /favicon.ico => generated 747 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+Gracefully killing worker 1 (pid: 828)...
+*** Starting uWSGI 2.0.14 (64bit) on [Sun Mar 26 15:39:55 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 March 2017 21:03:53
+os: Linux-3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+nodename: VM_254_236_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/dramalist
+detected binary path: /usr/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3901
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.0 (default, Mar 19 2017, 20:28:09)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1860cb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1860cb0 pid: 32672 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 32672, cores: 1)
+[pid: 32672|app: 0|req: 1/1] 120.236.163.70 () {44 vars in 835 bytes} [Sun Mar 26 15:39:58 2017] GET / => generated 2268 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 2/2] 120.236.163.70 () {44 vars in 851 bytes} [Sun Mar 26 15:39:58 2017] GET /static/css/index.css => generated 0 bytes in 7 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 32672|app: 0|req: 3/3] 120.236.163.70 () {44 vars in 831 bytes} [Sun Mar 26 15:39:58 2017] GET /static/js/index.js => generated 0 bytes in 0 msecs (HTTP/1.1 304) 1 headers in 66 bytes (0 switches on core 0)
+[pid: 32672|app: 0|req: 4/4] 120.236.163.70 () {44 vars in 827 bytes} [Sun Mar 26 15:39:59 2017] GET /getdramas => generated 707 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 5/5] 120.236.163.70 () {46 vars in 840 bytes} [Sun Mar 26 15:40:00 2017] GET /favicon.ico => generated 747 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 6/6] 120.236.163.70 () {42 vars in 803 bytes} [Sun Mar 26 15:40:05 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 7/7] 120.236.163.70 () {44 vars in 827 bytes} [Sun Mar 26 15:40:06 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 8/8] 120.236.163.70 () {42 vars in 803 bytes} [Sun Mar 26 16:12:08 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 9/9] 120.236.163.70 () {44 vars in 827 bytes} [Sun Mar 26 16:12:09 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 10/10] 120.236.163.70 () {50 vars in 975 bytes} [Sun Mar 26 16:12:24 2017] POST /postdramas => generated 17 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 11/11] 120.236.163.70 () {44 vars in 834 bytes} [Sun Mar 26 16:12:29 2017] GET / => generated 2268 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 32672|app: 0|req: 12/12] 120.236.163.70 () {44 vars in 827 bytes} [Sun Mar 26 16:12:30 2017] GET /getdramas => generated 707 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)

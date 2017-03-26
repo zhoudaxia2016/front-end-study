@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://libs.cdnjs.net/vue/2.0.3/vue.js"></script>
+  <script src="http://cdn.bootcss.com/vue-resource/1.2.1/vue-resource.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    [[ msg ]]
+  </div>
+  <script>
+var app = new Vue({
+    el: '#app',
+    delimiters: ['[[',']]'],
+    data: {
+      msg: 'Hello World!'
+    }
+});
+  </script>
+</body>
+</html>

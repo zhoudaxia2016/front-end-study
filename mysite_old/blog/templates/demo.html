@@ -1,0 +1,13 @@
+{% extends 'demo_base.html' %}
+
+{% block css %}
+{{ demo.css | safe }}
+{% endblock %}
+
+{% block body %}
+{{ demo.html | safe  }}
+{% endblock %}
+
+{% block js %}
+{{ demo.js | safe }}
+{% endblock %}
