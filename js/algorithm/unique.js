@@ -1,14 +1,3 @@
-// 去重
+const input=[1,2,1,3,3,4]
 
-function unique(arr){
-    var ret = [];
-    for(var i=0; i<arr.length; i++){
-        if (i === arr.indexOf(arr[i])){
-            ret.push(arr[i]);
-        }
-    }
-    return ret;
-}
-
-var argv = process.argv.slice(2);
-console.log(unique(argv));
+const output=new Set(input)
